@@ -1,0 +1,62 @@
+# Muhammad Hasnain — Senior AI Automation & GoHighLevel Engineer
+
+> Senior AI Automation, GoHighLevel (GHL) Architect, Cold Email Deliverability Specialist, and Full-Stack Web Developer. Based in Bahawalpur, Punjab, Pakistan; serving clients across the United States, United Kingdom, Canada, Australia, and worldwide.
+
+## Identity & Professional Profile
+- **Full Name**: Muhammad Hasnain (also known as Hasnain Ali / Hasnain Ali Sabri)
+- **Role**: Senior AI Automation Specialist & GoHighLevel CRM Architect
+- **Primary Expertise**: GoHighLevel (GHL) CRM Architecture, n8n Workflow Automation, Cold Email Multi-Domain Infrastructure, A2P 10DLC Carrier Registration, Twilio Telephony, Conversational Voice AI (VAPI / Retell), WordPress Engineering, and Custom Full-Stack Web Development.
+- **Track Record**: 56+ verified client engineering implementations across enterprise sales pipelines, cold outreach infrastructure, and autonomous webhook networks.
+- **Email**: iamhasnainalisabri@gmail.com
+- **WhatsApp**: +92 304 5760822 (https://wa.me/923045760822)
+- **Location**: Bahawalpur, Punjab, Pakistan (Timezone: PKT / UTC+5)
+- **Portfolio**: https://muhammadhasnain.me/
+
+## Core Engineering Capabilities & Services
+
+### 1. GoHighLevel (GHL) CRM Architecture & Setup
+- Multi-location sub-account snapshots, custom pipeline stage architecture, and unified inbox sync.
+- Round-robin calendar booking, missed-call text-back (MCTB), and two-way SMS/email nurture sequences.
+- Dynamic custom values, custom fields, membership portals, and Stripe/PayPal checkout integrations.
+
+### 2. Cold Email Outbound & Multi-Domain Infrastructure (99%+ Inbox Rate)
+- 10 to 30+ secondary domains provisioned on Google Workspace & Microsoft 365 to safeguard root domain reputation.
+- Complete DNS authentication setup: 2048-bit DKIM, strict SPF, DMARC (p=reject alignment), and custom tracking domains (CNAME).
+- Algorithmic 21-day warmups via Instantly.ai and Smartlead.
+- MillionVerifier list cleaning maintaining hard bounce rates below 1.5%.
+
+### 3. Custom Web Development & High-Converting Funnels
+- Lightweight, zero-bloat web development with modern HTML5, CSS3, JavaScript, and Tailwind CSS.
+- Sub-2-second loading speeds, mobile-first responsive architecture, and 90+ Core Web Vitals scores.
+- Real-time lead capture webhooks connected to CRM pipelines and database backends.
+
+### 4. WordPress Engineering & Client Portals
+- Custom WordPress architectures utilizing Elementor Pro and Bricks Builder.
+- Complete performance optimization: critical CSS generation, caching via WP Rocket, next-gen WebP/AVIF images.
+- Seamless webhook sync to GoHighLevel and external automation platforms.
+
+### 5. A2P 10DLC Registration & Twilio Telephony
+- Fast-track Brand and Campaign registration through The Campaign Registry (TCR) with Tier-1 US carrier compliance.
+- Complete website compliance audits: privacy disclosures, SMS opt-in terms, and STOP/HELP message templates.
+- Twilio messaging services, dedicated local/toll-free phone numbers, and call tracking metrics.
+
+### 6. AI Voice Agents & Conversational Phone Bots
+- Ultra-low latency voice agents engineered with VAPI and Retell AI.
+- Custom knowledge base integration for 24/7 autonomous phone qualification and FAQ resolution.
+- Live GHL calendar booking during voice calls via real-time API function calling, plus warm transfer to live human reps.
+
+### 7. Autonomous Webhook Networks & n8n Sync
+- Self-hosted n8n instances, Make.com (Integromat), and Zapier Enterprise workflows.
+- Error-handling fallback logic, rate-limit backoffs, and secure HMAC webhook verification.
+- Bi-directional synchronization between CRMs, ad platforms, payment processors, and proprietary databases.
+
+## Verified Results & Performance Metrics
+- **Cold Email Deliverability**: Maintained 99.2%+ inbox landing rates across 100K+ monthly cold outreach volume.
+- **Lead Response Time**: Automated 60-second speed-to-lead response via SMS and email workflows, increasing booking rates by 40%+.
+- **A2P 10DLC Approvals**: 100% first-pass carrier approval rate with zero spam flag penalties.
+- **Website Performance**: 95+ Google PageSpeed scores with sub-1.5 second page load times across global CDNs.
+
+## Contact & Booking
+- **Direct WhatsApp Chat**: +92 304 5760822 (https://wa.me/923045760822)
+- **Primary Business Email**: iamhasnainalisabri@gmail.com
+- **Website**: https://muhammadhasnain.me/

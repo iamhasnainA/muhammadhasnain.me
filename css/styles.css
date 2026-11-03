@@ -1,0 +1,689 @@
+/* =========================================================================
+   MUHAMMAD HASNAIN — PERSONAL PORTFOLIO
+   Strict Black & White Editorial Stylesheet
+   Pure CSS3 + Vanilla Architecture • High-Performance Optimized
+   ========================================================================= */
+
+/* (Font loaded via asynchronous preconnect in HTML head to prevent render-blocking) */
+
+:root {
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #FAFAFA;
+  --bg-tertiary: #F4F4F5;
+  --text-primary: #000000;
+  --text-secondary: #1F2937;
+  --text-muted: #374151;
+  --border-light: #E5E7EB;
+  --border-medium: #D1D5DB;
+  --border-dark: #111827;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* Base Document Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
+  scrollbar-width: thin;
+  scrollbar-color: #18181B #FAFAFA;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: clip;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* =========================================================================
+   BULLETPROOF STICKY HEADER (MOBILE + DESKTOP)
+   ========================================================================= */
+header,
+.site-header {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 50 !important;
+  width: 100% !important;
+  background-color: rgba(255, 255, 255, 0.96) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+::selection {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+/* Subtle architectural dot grid in pure neutral gray */
+.dot-grid {
+  background-image: radial-gradient(#E5E7EB 1.2px, transparent 1.2px);
+  background-size: 28px 28px;
+}
+
+/* Typography Helpers */
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Buttons — Strict Black & White */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #000000;
+  color: #FFFFFF;
+  border: 1px solid #000000;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #262626;
+  border-color: #262626;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #FFFFFF;
+  color: #000000;
+  border: 1px solid #000000;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+/* Badges & Tags */
+.badge-black {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.badge-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  background-color: #FFFFFF;
+  color: #111827;
+  border: 1px solid #E5E7EB;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* =========================================================================
+   HERO FULL BACKGROUND PORTRAIT (BEHIND TEXT WATERMARK)
+   ========================================================================= */
+.hero-bg-portrait-wrapper {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  user-select: none;
+  padding-top: 0.25rem;
+}
+
+.hero-bg-portrait {
+  height: 96%;
+  max-height: 560px;
+  width: auto;
+  object-fit: contain;
+  object-position: top center;
+  opacity: 0.32;
+  filter: grayscale(100%) contrast(1.1);
+  transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.5s ease;
+  user-select: none;
+  pointer-events: none;
+  will-change: transform;
+}
+
+@media (max-width: 640px) {
+  .hero-bg-portrait {
+    opacity: 0.26;
+    height: 80%;
+    max-height: 420px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-bg-portrait {
+    opacity: 0.35;
+    height: 98%;
+    max-height: 620px;
+  }
+}
+
+/* Subtle continuous marquee */
+@keyframes marqueeScroll {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 36s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* =========================================================================
+   TESTIMONIALS INFINITE HORIZONTAL LOOP MARQUEE
+   ========================================================================= */
+@keyframes marqueeLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marqueeRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.testimonials-marquee-left {
+  display: flex;
+  width: max-content;
+  animation: marqueeLeft 42s linear infinite;
+  will-change: transform;
+}
+
+.testimonials-marquee-right {
+  display: flex;
+  width: max-content;
+  animation: marqueeRight 46s linear infinite;
+  will-change: transform;
+}
+
+.testimonials-marquee-left:hover,
+.testimonials-marquee-right:hover {
+  animation-play-state: paused;
+}
+
+/* Scroll reveal classes */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Modal styling */
+.case-study-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.case-study-modal.is-active {
+  display: flex;
+}
+
+/* =========================================================================
+   LUXURY EDITORIAL CUSTOM SCROLLBAR (POWERFUL OBSIDIAN + EMERALD ACCENT)
+   ========================================================================= */
+/* WebKit & Blink Browsers (Chrome, Edge, Brave, Opera, Safari on Windows & Mac) */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAFAFA;
+  border-left: 1px solid #E5E7EB;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.02);
+}
+
+::-webkit-scrollbar-track:hover {
+  background: #F4F4F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #27272A 0%, #09090B 100%);
+  border-radius: 9999px;
+  border: 2.5px solid #FAFAFA;
+  background-clip: padding-box;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+  transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #000000;
+  border-color: #F4F4F5;
+  box-shadow: inset 0 0 0 1px #10B981, 0 0 10px rgba(0, 0, 0, 0.35);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #000000;
+  border-color: #E4E4E7;
+  box-shadow: inset 0 0 0 1.5px #10B981, 0 0 14px rgba(16, 185, 129, 0.6);
+}
+
+/* Remove clunky default Windows Chrome/Edge arrows */
+::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+::-webkit-scrollbar-corner {
+  background: #FAFAFA;
+}
+
+/* Accessibility: Respect Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .marquee-track,
+  .testimonials-marquee-left,
+  .testimonials-marquee-right {
+    animation: none !important;
+  }
+}
+
+/* =========================================================================
+   FLOATING PROGRESS BACK-TO-TOP CONTROLLER (LUXURY CAPSULE WITH LIVE PERCENTAGE)
+   ========================================================================= */
+.floating-top-controller {
+  position: fixed;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  z-index: 55;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.floating-top-capsule {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.85rem 0.25rem 0.25rem;
+  border-radius: 9999px;
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  outline: none;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.floating-top-capsule:hover {
+  transform: translateY(-3px);
+  background-color: #000000;
+  border-color: #000000;
+  box-shadow: 0 14px 28px -4px rgba(0, 0, 0, 0.3);
+}
+
+.floating-top-ring-wrap {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.floating-top-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  transform: rotate(-90deg);
+  pointer-events: none;
+}
+
+.floating-top-track {
+  stroke: #F3F4F6;
+  fill: none;
+  transition: stroke 0.25s ease;
+}
+
+.floating-top-capsule:hover .floating-top-track {
+  stroke: #27272A;
+}
+
+.floating-top-progress {
+  stroke: #000000;
+  fill: none;
+  stroke-dasharray: 87.96;
+  stroke-dashoffset: 87.96;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.12s ease-out, stroke 0.25s ease;
+}
+
+.floating-top-capsule:hover .floating-top-progress {
+  stroke: #10B981;
+}
+
+.floating-top-arrow {
+  width: 14px;
+  height: 14px;
+  color: #000000;
+  z-index: 2;
+  pointer-events: none;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.floating-top-capsule:hover .floating-top-arrow {
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.floating-top-percent {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: -0.02em;
+  min-width: 2rem;
+  text-align: right;
+  transition: color 0.25s ease;
+}
+
+.floating-top-capsule:hover .floating-top-percent {
+  color: #FFFFFF;
+}
+
+.floating-top-action {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  font-weight: 700;
+  color: #71717A;
+  letter-spacing: 0.05em;
+  transition: color 0.25s ease;
+}
+
+.floating-top-capsule:hover .floating-top-action {
+  color: #A1A1AA;
+}
+
+/* Side Floating Scroll Percentage HUD (Tracks with side scroller on desktop) */
+.side-scroll-hud {
+  position: fixed;
+  right: 1.25rem;
+  z-index: 45;
+  pointer-events: none;
+  display: none;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.55rem;
+  border-radius: 9999px;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  color: #FFFFFF;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  opacity: 0;
+  transform: translateY(-50%) scale(0.9);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  will-change: top, opacity;
+}
+
+@media (min-width: 768px) {
+  .side-scroll-hud.is-active {
+    display: flex;
+  }
+}
+
+.side-scroll-hud.is-visible {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+}
+
+/* =========================================================================
+   WHATSAPP AI CHATBOT AGENT WIDGET (LUXURY EDITORIAL INTERFACE)
+   ========================================================================= */
+.whatsapp-widget-container {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 50;
+}
+
+@media (min-width: 640px) {
+  .whatsapp-widget-container {
+    bottom: 2rem;
+    right: 2rem;
+  }
+  .floating-top-controller {
+    bottom: 2rem;
+    left: 2rem;
+  }
+}
+
+.whatsapp-trigger-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  background-color: #000000;
+  color: #FFFFFF;
+  border: 1px solid #262626;
+  border-radius: 9999px;
+  padding: 0.625rem 1.125rem 0.625rem 0.875rem;
+  box-shadow: 0 12px 30px -4px rgba(0, 0, 0, 0.35), 0 4px 8px -2px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  outline: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+.whatsapp-trigger-btn:hover {
+  background-color: #171717;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px -4px rgba(0, 0, 0, 0.45);
+  border-color: #404040;
+}
+
+.radar-pulse-emerald {
+  animation: radarPulseEmerald 2.2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+@keyframes radarPulseEmerald {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 7px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+.whatsapp-chatbox {
+  position: absolute;
+  bottom: calc(100% + 14px);
+  right: 0;
+  width: 360px;
+  max-width: calc(100vw - 2rem);
+  height: 520px;
+  max-height: calc(100vh - 7rem);
+  background-color: #FFFFFF;
+  border: 1px solid #D1D5DB;
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.28), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform-origin: bottom right;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s;
+}
+
+.whatsapp-chatbox.is-collapsed {
+  opacity: 0;
+  transform: translateY(16px) scale(0.95);
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.whatsapp-chatbox.is-open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.chat-bubble-agent {
+  background-color: #F4F4F5;
+  border: 1px solid #E4E4E7;
+  color: #18181B;
+  border-radius: 0.875rem 0.875rem 0.875rem 0.25rem;
+}
+
+.chat-prompt-pill {
+  transition: all 0.2s ease;
+}
+
+.chat-prompt-pill:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+  border-color: #000000;
+  transform: translateY(-1px);
+}
+
+.chat-bubble-user {
+  background-color: #000000;
+  border: 1px solid #18181B;
+  color: #FFFFFF;
+  border-radius: 0.875rem 0.875rem 0.25rem 0.875rem;
+}
+
+.chat-typing-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.chat-typing-dot {
+  width: 5px;
+  height: 5px;
+  background-color: #71717A;
+  border-radius: 50%;
+  animation: chatTypingBounce 1.4s infinite ease-in-out both;
+}
+.chat-typing-dot:nth-child(1) { animation-delay: -0.32s; }
+.chat-typing-dot:nth-child(2) { animation-delay: -0.16s; }
+.chat-typing-dot:nth-child(3) { animation-delay: 0s; }
+
+@keyframes chatTypingBounce {
+  0%, 80%, 100% {
+    transform: scale(0.6);
+    opacity: 0.4;
+  }
+  40% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+/* =========================================================================
+   LOW-NETWORK SPEED & CORE WEB VITALS HARDWARE ACCELERATION
+   ========================================================================= */
+.cv-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 750px;
+}
+
+/* GPU rendering layer hint for silky 60fps animations */
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Print optimizations */
+@media print {
+  #floatingBackToTop, #whatsappAiWidget, #progressBar {
+    display: none !important;
+  }
+}

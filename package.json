@@ -1,0 +1,13 @@
+{
+  "name": "muhammad-hasnain-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Production portfolio for Muhammad Hasnain — Senior AI Automation & GoHighLevel Engineer",
+  "scripts": {
+    "build:css": "tailwindcss -i ./css/tailwind-input.css -o ./css/tailwind.min.css --minify",
+    "build": "npm run build:css"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}
